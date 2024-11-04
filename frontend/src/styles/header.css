@@ -1,0 +1,105 @@
+/* src/styles/header.css */
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Alinhamento do botão no canto superior esquerdo */
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Oculta o botão em telas maiores */
+    z-index: 10; /* Garante que o botão fique acima dos outros elementos */
+}
+
+/* Ajuste para que o logo fique centralizado */
+.logo h1 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Estilos do Menu Navbar */
+.navbar {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 200px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+}
+
+.navbar.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar ul li {
+    border-bottom: 1px solid #444;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o botão em telas menores */
+    }
+
+    .navbar {
+        width: 100%; /* Faz o menu ocupar a largura total */
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar {
+        position: static;
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: none; /* Oculta o botão em telas maiores */
+    }
+}

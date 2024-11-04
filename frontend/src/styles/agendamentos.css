@@ -1,0 +1,54 @@
+/* src/pages/agendamentos.css */
+
+.agendamentos-container {
+    padding: 20px; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 600px; /* Largura máxima */
+    margin: 20px auto; /* Centraliza o container */
+}
+
+h1 {
+    color: #333; /* Cor do título */
+    text-align: center; /* Centraliza o título */
+}
+
+.agendamentos-list {
+    list-style-type: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove preenchimento da lista */
+}
+
+.agendamento-item {
+    background-color: #f9f9f9; /* Cor de fundo dos itens */
+    border: 1px solid #ddd; /* Borda do item */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaça os elementos */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.editar-btn,
+.excluir-btn {
+    padding: 8px 12px; /* Espaçamento interno dos botões */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+.editar-btn {
+    background-color: #4caf50; /* Cor do botão editar */
+    color: white; /* Cor do texto do botão */
+}
+
+.excluir-btn {
+    background-color: #f44336; /* Cor do botão excluir */
+    color: white; /* Cor do texto do botão */
+}
+
+.editar-btn:hover,
+.excluir-btn:hover {
+    opacity: 0.8; /* Reduz a opacidade ao passar o mouse */
+}
